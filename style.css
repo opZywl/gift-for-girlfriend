@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(to bottom, #6ab7f5, #fff);
+  text-align: center;
+  min-height: 100vh;
+}
+
+main {
+  padding-top: 2rem;
+  position: relative;
+}
+
+h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-right: 1.1rem;
+  text-align: center;
+}
+
+h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10rem;
+  font-family: "Hepta Slab", serif;
+  font-family: "Press Start 2P", cursive;
+  color: #fff;
+}
+
+.gatinhoBravo {
+  width: 10rem;
+  height: 16rem;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns button {
+  font-family: "Hepta Slab", serif;
+  font-family: "Press Start 2P", cursive;
+  width: 10rem;
+  height: 3rem;
+  font-size: 0.8rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  color: white;
+  background-color: #444;
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+  cursor: pointer;
+}
+
+.disable {
+  display: none;
+}
+
+button:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 1rem;
+}
+
+.vibrate-1 {
+  animation: vibrate-1 0.3s linear infinite both;
+}
+
+@keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@media (max-width: 800px) {
+  
+  main {
+    padding-right: 1.1rem;
+  }
+  
+  .btns button {
+    width: 8rem;
+  }
+
+  .corePixel {
+    width: 20rem;
+    padding: 2rem;
+  }
+
+  .jasna {
+    right: 1rem;
+    top: 10rem;
+  }
+}

@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(to bottom, #6ab7f5, #fff);
+  text-align: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.presentes {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.presente {
+  width: 18rem;
+  cursor: pointer;
+  position: absolute;
+  top: 15rem;
+}
+
+.aberta {
+  width: 30rem;
+  cursor: pointer;
+  position: absolute;
+  top: 5rem;
+  left: 22rem;
+}
+
+.disable {
+  display: none;
+}
+
+.gatinho {
+  width: 15rem;
+}
+
+.title {
+  padding: 1rem 0;
+  font-family: "Roboto", sans-serif;
+  color: #dc2626;
+}
+
+.balaos {
+  position: relative;
+}
+
+.balao1 {
+  width: 23rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.balao2 {
+  width: 23rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.slide-in-bottom {
+  animation: slide-in-bottom 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.balao-in-bottom {
+  animation: balao-in-bottom 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes balao-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .aberta {
+    width: 20rem;
+    left: 0;
+  }
+
+  .gatinho {
+    padding-right: 0.5rem;
+  }
+
+  .balaos {
+    display: none;
+  }
+}
