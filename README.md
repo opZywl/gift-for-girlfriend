@@ -15,9 +15,9 @@
 
 Oi, esse é meu guia fantástico e revolucionário pra ajudar vocês a conseguirem um par. Sim, isso mesmo, vocês aí do outro lado da tela!!!! 🐎💩 Hoje é o dia em que vocês vão finalmente descobrir como arrumar o amor da vida de uma vez por todas. 🦃🦃🦃🦃🦃
 
-Porque eu sei que a "vida" amorosa de um(a) jogador(a) de Stardew não é das mais fáceis. Sim, eu sei como as pessoas pensam que vocês são ESTRANHOS E BIZARROS, mas isso muda hoje. Eu tô aqui pra ajudar a mudar a vida de vocês. :)
+Porque eu sei que a "vida" amorosa de um(a) jogador(a) de Minecraft não é das mais fáceis. Sim, eu sei como as pessoas pensam que vocês são ESTRANHOS E BIZARROS, mas isso muda hoje. Eu tô aqui pra ajudar a mudar a vida de vocês. :)
 
-### 1. DESINSTALE O STARDEW VALLEY
+### 1. DESINSTALE O MINECRAFT
 
 ![Imagem](https://steamuserimages-a.akamaihd.net/ugc/2484381748304088764/1027E3503B55F557FE0F0E80537D7181ADDC8452/)
 
@@ -50,7 +50,6 @@ No caso de vocês, só fiquem menos feios mesmo ☠️☠️
 ![Imagem](https://steamuserimages-a.akamaihd.net/ugc/2484381748304224192/F16164BAFD96B3E34B508B044758D7A9660EA7DC/)
 
 Torna vocês irresistíveis a qualquer pessoa 🥵🥵
-
 
 ### 5. Convidem a Pessoa para Sair
 
@@ -96,6 +95,6 @@ Esse foi o guia, meus amigos geniais e legais. Aparentemente, não dá certo alg
 
 Deixem o like e se inscrevam se quiserem um guia de como falsificar nota de 100 cruzeiros. Se não quiserem, deixem o like também, vão ser cobrados pelo morro da Jabuticaba, o mais perigoso do Acre 🤫
 
-É isso e falou, meus peixes. Até a próxima, aqui é o Jake na voz. 🐟🐟😬😬
+É isso e falou, meus peixes. Até a próxima, aqui é o Zywl na voz. 🐟🐟😬😬
 
 ---
