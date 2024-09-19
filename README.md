@@ -73,7 +73,7 @@ O DRIP tem que permanecer 😎😎
 
 ![Imagem](https://steamuserimages-a.akamaihd.net/ugc/2484381748304606884/34D14497456FD80D029B2075D6313E0B03B02FBE/)
 
-Dica: Não perguntem se a pessoa gosta do RPG do Cellbit no primeiro encontro (NEM QUE JOGA LOL 🤬), confiem em mim, já testei e não funciona 🤓🤓
+Dica: Não perguntem se a pessoa gosta do RPG do Cellbit, nem se joga o grande MINECRAFT, no primeiro encontro (NEM QUE JOGA LOL 🤬), confiem em mim, já testei e não funciona 🤓🤓
 
 O Programa do Ratinho não é um bom lugar pra um primeiro encontro 🐀
 
