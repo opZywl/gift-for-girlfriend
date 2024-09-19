@@ -17,7 +17,7 @@ Oi, esse é meu guia fantástico e revolucionário pra ajudar vocês a conseguir
 
 Porque eu sei que a "vida" amorosa de um(a) jogador(a) de Minecraft não é das mais fáceis. Sim, eu sei como as pessoas pensam que vocês são ESTRANHOS E BIZARROS, mas isso muda hoje. Eu tô aqui pra ajudar a mudar a vida de vocês. :)
 
-### 1. DESINSTALE O MINECRAFT
+### 1. DESINSTALE O STARDEY VALLEY
 
 ![Imagem](https://steamuserimages-a.akamaihd.net/ugc/2484381748304088764/1027E3503B55F557FE0F0E80537D7181ADDC8452/)
 
