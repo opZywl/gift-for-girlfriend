@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const title = document.querySelector(".title");
   const jasna = document.querySelector(".jasna");
 
-  // Função para mover o botão "NÃO"
   function desvia(btn) {
     btn.style.position = 'absolute';
     btn.style.bottom = geraPosicao(10, 90);
@@ -58,6 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
   btnYes.addEventListener('click', () => {
     location.href = "presente.html";
   });
+
+  btnNo.addEventListener('mouseover', () => desvia(btnNo));
 
   btnNo.addEventListener('click', async () => {
     const translations = await loadTranslations(detectLanguage());
