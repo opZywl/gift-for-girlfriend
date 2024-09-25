@@ -1,8 +1,10 @@
 {
+  "globals": {
+    "name": "DANIELLE LOPES"
+  },
   "pt-br": {
     "index": {
       "title": "VOCÊ ME AMA?",
-      "jasna": "DANIELLE LOPES",
       "btnYes": "SIM",
       "btnNo": "NÃO",
       "rejectMessage": "SE NÃO ME AMA APENAS ME MAMA"
@@ -14,7 +16,6 @@
   "en-us": {
     "index": {
       "title": "DO YOU LOVE ME?",
-      "jasna": "DANIELLE LOPES",
       "btnYes": "YES",
       "btnNo": "NO",
       "rejectMessage": "IF YOU DON'T LOVE ME, JUST LEAVE ME ALONE"
@@ -26,7 +27,6 @@
   "zh-cn": {
     "index": {
       "title": "你爱我吗?",
-      "jasna": "丹妮尔·洛佩斯",
       "btnYes": "是的",
       "btnNo": "不",
       "rejectMessage": "如果你不爱我，请离开我"
@@ -38,13 +38,23 @@
   "ru-ru": {
     "index": {
       "title": "ТЫ ЛЮБИШЬ МЕНЯ?",
-      "jasna": "ДАНИЭЛЬ ЛОПЕС",
       "btnYes": "ДА",
       "btnNo": "НЕТ",
       "rejectMessage": "ЕСЛИ ТЫ МЕНЯ НЕ ЛЮБИШЬ, ПРОСТО ОСТАВЬ МЕНЯ В ПОКОЕ"
     },
     "presente": {
-      "title": "ЦВЕТОК ДЛЯ ДРУГОГО ЦВЕТКА, С ДНЕМ РОЖДЕНИЯ, МОЯ ЛЮБОВЬ, Я ТЕБЯ ЛЮБЛЮ!"
+      "title": "ЦВЕТОК ДЛЯ ДРУГОГО ЦВЕТКА, С ДНЁМ РОЖДЕНИЯ, МОЯ ЛЮБОВЬ, Я ТЕБЯ ЛЮБЛЮ!"
+    }
+  },
+  "de-de": {
+    "index": {
+      "title": "LIEBST DU MICH?",
+      "btnYes": "JA",
+      "btnNo": "NEIN",
+      "rejectMessage": "WENN DU MICH NICHT LIEBST, LASS MICH EINFACH IN RUHE"
+    },
+    "presente": {
+      "title": "EINE BLUME FÜR EINE ANDERE BLUME, ALLES GUTE ZUM GEBURTSTAG MEINE LIEBE, ICH LIEBE DICH!"
     }
   }
 }

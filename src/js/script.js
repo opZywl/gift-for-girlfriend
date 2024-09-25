@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const response = await fetch('resources/language/translations.json');
       const translations = await response.json();
-      return translations[lang] || translations["pt-br"];
+      const langTranslations = translations[lang] || translations["pt-br"];
+      const globals = translations["globals"];
+      return { ...langTranslations, globals };
     } catch (error) {
       console.error("Erro ao carregar o arquivo de traduções:", error);
       return null;
@@ -24,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function applyTranslations(translations) {
     title.textContent = translations.index.title;
-    jasna.textContent = translations.index.jasna;
+    jasna.textContent = translations.globals.name;
     btnYes.textContent = translations.index.btnYes;
     btnNo.textContent = translations.index.btnNo;
   }
