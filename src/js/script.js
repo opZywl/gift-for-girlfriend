@@ -1,29 +1,42 @@
-const btnYes = document.querySelector(".btnYes");
-const btnNo = document.querySelector(".btnNo");
-
-const banner = document.querySelector(".corePixel");
-const gatinhoBravo = document.querySelector(".gatinhoBravo");
-
+const presenteImg = document.querySelector(".presente");
+const abertaImg = document.querySelector(".aberta");
+const gatinhoImg = document.querySelector(".gatinho");
 const title = document.querySelector(".title");
-const jasna = document.querySelector(".jasna");
+const balaos = document.querySelector(".balaos");
 
-btnYes.addEventListener('click', () => {
-  location.href = "presente.html";
-});
+const translations = {
+  "pt-br": {
+    title: "UMA FLOR PARA OUTRA FLOR, PARABÉNS MEU AMOR, EU TE AMO!"
+  },
+  "en-us": {
+    title: "A FLOWER FOR ANOTHER FLOWER, HAPPY BIRTHDAY MY LOVE, I LOVE YOU!"
+  }
+};
 
-btnNo.addEventListener('click', () => {
-  banner.classList.add('disable');
-  gatinhoBravo.classList.remove('disable');
-  jasna.classList.add('disable');
-  title.textContent = "SE NÃO ME AMA APENAS ME MAMA";
-});
-
-function desvia(btn) {
-  btn.style.position = 'absolute';
-  btn.style.bottom = geraPosicao(10, 90);
-  btn.style.left = geraPosicao(10, 90);
+function detectLanguage() {
+  const language = navigator.language.toLowerCase();
+  return translations[language] ? language : "pt-br";
 }
 
-function geraPosicao(min, max) {
-  return (Math.random() * (max - min) + min) + "%";
+function applyTranslations(lang) {
+  title.querySelector('h1').textContent = translations[lang].title;
+}
+
+const userLang = detectLanguage();
+applyTranslations(userLang);
+
+function abrir() {
+  presenteImg.classList.add('disable');
+  abertaImg.classList.remove('disable');
+  gatinhoImg.classList.remove('disable');
+  title.classList.remove('disable');
+  balaos.classList.remove('disable');
+
+  setTimeout(() => {
+    yt();
+  }, 7000);
+}
+
+function yt() {
+  location.href = "https://www.youtube.com/watch?v=rs6Y4kZ8qtw";
 }
