@@ -1,42 +1,46 @@
-const presenteImg = document.querySelector(".presente");
-const abertaImg = document.querySelector(".aberta");
-const gatinhoImg = document.querySelector(".gatinho");
-const title = document.querySelector(".title");
-const balaos = document.querySelector(".balaos");
+document.addEventListener('DOMContentLoaded', () => {
+  const btnYes = document.querySelector(".btnYes");
+  const btnNo = document.querySelector(".btnNo");
+  const banner = document.querySelector(".corePixel");
+  const gatinhoBravo = document.querySelector(".gatinhoBravo");
+  const title = document.querySelector(".title");
+  const jasna = document.querySelector(".jasna");
 
-const translations = {
-  "pt-br": {
-    title: "UMA FLOR PARA OUTRA FLOR, PARABÉNS MEU AMOR, EU TE AMO!"
-  },
-  "en-us": {
-    title: "A FLOWER FOR ANOTHER FLOWER, HAPPY BIRTHDAY MY LOVE, I LOVE YOU!"
+  function detectLanguage() {
+    const language = navigator.language.toLowerCase();
+    return language;
   }
-};
 
-function detectLanguage() {
-  const language = navigator.language.toLowerCase();
-  return translations[language] ? language : "pt-br";
-}
+  async function loadTranslations(lang) {
+    try {
+      const response = await fetch('resources/language/translations.json');
+      const translations = await response.json();
+      return translations[lang] || translations["pt-br"];
+    } catch (error) {
+      console.error("Erro ao carregar o arquivo de traduções:", error);
+      return null;
+    }
+  }
 
-function applyTranslations(lang) {
-  title.querySelector('h1').textContent = translations[lang].title;
-}
+  function applyTranslations(translations) {
+    title.textContent = translations.index.title;
+    jasna.textContent = translations.index.jasna;
+    btnYes.textContent = translations.index.btnYes;
+    btnNo.textContent = translations.index.btnNo;
+  }
 
-const userLang = detectLanguage();
-applyTranslations(userLang);
+  btnYes.addEventListener('click', () => {
+    location.href = "presente.html";
+  });
 
-function abrir() {
-  presenteImg.classList.add('disable');
-  abertaImg.classList.remove('disable');
-  gatinhoImg.classList.remove('disable');
-  title.classList.remove('disable');
-  balaos.classList.remove('disable');
+  btnNo.addEventListener('click', async () => {
+    const translations = await loadTranslations(detectLanguage());
+    banner.classList.add('disable');
+    gatinhoBravo.classList.remove('disable');
+    jasna.classList.add('disable');
+    title.textContent = translations.index.rejectMessage;
+  });
 
-  setTimeout(() => {
-    yt();
-  }, 7000);
-}
-
-function yt() {
-  location.href = "https://www.youtube.com/watch?v=rs6Y4kZ8qtw";
-}
+  const userLang = detectLanguage();
+  loadTranslations(userLang).then(applyTranslations);
+});

@@ -1,0 +1,50 @@
+{
+  "pt-br": {
+    "index": {
+      "title": "VOCÊ ME AMA?",
+      "jasna": "DANIELLE LOPES",
+      "btnYes": "SIM",
+      "btnNo": "NÃO",
+      "rejectMessage": "SE NÃO ME AMA APENAS ME MAMA"
+    },
+    "presente": {
+      "title": "UMA FLOR PARA OUTRA FLOR, PARABÉNS MEU AMOR, EU TE AMO!"
+    }
+  },
+  "en-us": {
+    "index": {
+      "title": "DO YOU LOVE ME?",
+      "jasna": "DANIELLE LOPES",
+      "btnYes": "YES",
+      "btnNo": "NO",
+      "rejectMessage": "IF YOU DON'T LOVE ME, JUST LEAVE ME ALONE"
+    },
+    "presente": {
+      "title": "A FLOWER FOR ANOTHER FLOWER, HAPPY BIRTHDAY MY LOVE, I LOVE YOU!"
+    }
+  },
+  "zh-cn": {
+    "index": {
+      "title": "你爱我吗?",
+      "jasna": "丹妮尔·洛佩斯",
+      "btnYes": "是的",
+      "btnNo": "不",
+      "rejectMessage": "如果你不爱我，请离开我"
+    },
+    "presente": {
+      "title": "一朵花送给另一朵花，生日快乐，我爱你！"
+    }
+  },
+  "ru-ru": {
+    "index": {
+      "title": "ТЫ ЛЮБИШЬ МЕНЯ?",
+      "jasna": "ДАНИЭЛЬ ЛОПЕС",
+      "btnYes": "ДА",
+      "btnNo": "НЕТ",
+      "rejectMessage": "ЕСЛИ ТЫ МЕНЯ НЕ ЛЮБИШЬ, ПРОСТО ОСТАВЬ МЕНЯ В ПОКОЕ"
+    },
+    "presente": {
+      "title": "ЦВЕТОК ДЛЯ ДРУГОГО ЦВЕТКА, С ДНЕМ РОЖДЕНИЯ, МОЯ ЛЮБОВЬ, Я ТЕБЯ ЛЮБЛЮ!"
+    }
+  }
+}
