@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const presenteImg = document.querySelector(".presente");
+  const presenteImg = document.querySelector("#presente");
   const abertaImg = document.querySelector(".aberta");
   const gatinhoImg = document.querySelector(".gatinho");
   const title = document.querySelector(".title");
@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function yt() {
     location.href = "https://www.youtube.com/watch?v=rs6Y4kZ8qtw";
   }
+
+  presenteImg.addEventListener('click', abrir);
 
   const userLang = detectLanguage();
   loadTranslations(userLang).then(applyTranslations);
