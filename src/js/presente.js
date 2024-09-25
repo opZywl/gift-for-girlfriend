@@ -18,8 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const globals = translations["globals"];
       return { ...langTranslations, globals };
     } catch (error) {
-      console.error("Erro ao carregar o arquivo de traduções:", error);
-      return null;
+      console.error("Error loading the translation file:", error);
+      const translations = await loadFallbackTranslations(lang);
+      return translations;
+    }
+  }
+
+  async function loadFallbackTranslations(lang) {
+    try {
+      const response = await fetch('resources/language/translations.json');
+      const translations = await response.json();
+      const langTranslations = translations[lang] || translations["pt-br"];
+      console.error(langTranslations.errors.loadTranslations);
+      return langTranslations;
+    } catch (error) {
+      console.error("Fallback error occurred:", error);
     }
   }
 

@@ -11,6 +11,9 @@
     },
     "presente": {
       "title": "UMA FLOR PARA OUTRA FLOR, PARABÉNS MEU AMOR, EU TE AMO!"
+    },
+    "errors": {
+      "loadTranslations": "Erro ao carregar o arquivo de traduções"
     }
   },
   "en-us": {
@@ -22,6 +25,9 @@
     },
     "presente": {
       "title": "A FLOWER FOR ANOTHER FLOWER, HAPPY BIRTHDAY MY LOVE, I LOVE YOU!"
+    },
+    "errors": {
+      "loadTranslations": "Error loading the translation file"
     }
   },
   "zh-cn": {
@@ -33,6 +39,9 @@
     },
     "presente": {
       "title": "一朵花送给另一朵花，生日快乐，我爱你！"
+    },
+    "errors": {
+      "loadTranslations": "加载翻译文件时出错"
     }
   },
   "ru-ru": {
@@ -44,6 +53,9 @@
     },
     "presente": {
       "title": "ЦВЕТОК ДЛЯ ДРУГОГО ЦВЕТКА, С ДНЁМ РОЖДЕНИЯ, МОЯ ЛЮБОВЬ, Я ТЕБЯ ЛЮБЛЮ!"
+    },
+    "errors": {
+      "loadTranslations": "Ошибка при загрузке файла перевода"
     }
   },
   "de-de": {
@@ -55,6 +67,9 @@
     },
     "presente": {
       "title": "EINE BLUME FÜR EINE ANDERE BLUME, ALLES GUTE ZUM GEBURTSTAG MEINE LIEBE, ICH LIEBE DICH!"
+    },
+    "errors": {
+      "loadTranslations": "Fehler beim Laden der Übersetzungsdatei"
     }
   }
 }
