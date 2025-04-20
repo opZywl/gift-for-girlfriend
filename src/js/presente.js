@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const balaos = document.querySelector(".balaos");
 
   function detectLanguage() {
-    const language = navigator.language.toLowerCase();
-    return language;
+    return navigator.language.toLowerCase();
   }
 
   async function loadTranslations(lang) {
@@ -19,8 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return { ...langTranslations, globals };
     } catch (error) {
       console.error("Error loading the translation file:", error);
-      const translations = await loadFallbackTranslations(lang);
-      return translations;
+      return await loadFallbackTranslations(lang);
     }
   }
 

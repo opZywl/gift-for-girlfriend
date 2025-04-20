@@ -1,73 +1,102 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const btnYes = document.querySelector(".btnYes");
-  const btnNo = document.querySelector(".btnNo");
-  const banner = document.querySelector(".corePixel");
-  const gatinhoBravo = document.querySelector(".gatinhoBravo");
-  const title = document.querySelector(".title");
-  const jasna = document.querySelector(".jasna");
+  const btnYes = document.querySelector('.btnYes');
+  const btnNo = document.querySelector('.btnNo');
+  const banner = document.querySelector('.corePixel');
+  const gatinhoBravo = document.querySelector('.gatinhoBravo');
+  const titleEl = document.querySelector('.title');
+  const jasnaEl = document.querySelector('.jasna');
+  let translationsCache = null;
 
-  function desvia(btn) {
-    btn.style.position = 'absolute';
-    btn.style.bottom = geraPosicao(10, 90);
-    btn.style.left = geraPosicao(10, 90);
-  }
+  const CHANCE_TO_STAY = 0.03;
 
-  function geraPosicao(min, max) {
-    return (Math.random() * (max - min) + min) + "%";
-  }
+  const detectLanguage = () =>
+      (navigator.language || 'pt-br').toLowerCase();
 
-  function detectLanguage() {
-    const language = navigator.language.toLowerCase();
-    return language;
-  }
-
-  async function loadTranslations(lang) {
+  const loadTranslations = async (lang) => {
+    if (translationsCache) return translationsCache;
     try {
-      const response = await fetch('resources/language/translations.json');
-      const translations = await response.json();
-      const langTranslations = translations[lang] || translations["pt-br"];
-      const globals = translations["globals"];
-      return { ...langTranslations, globals };
-    } catch (error) {
-      console.error("Error loading the translation file:", error);
-      const translations = await loadFallbackTranslations(lang);
-      return translations;
+      const res = await fetch('resources/language/translations.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const shortLang = lang.split('-')[0];
+      const langData =
+          data[lang] || data[shortLang] || data['pt-br'] || {};
+      translationsCache = {
+        ...langData,
+        globals: data.globals || {},
+      };
+      return translationsCache;
+    } catch (err) {
+      console.error('Erro ao carregar traduções:', err);
+      return translationsCache || { index: {}, globals: {} };
     }
-  }
+  };
 
-  async function loadFallbackTranslations(lang) {
-    try {
-      const response = await fetch('resources/language/translations.json');
-      const translations = await response.json();
-      const langTranslations = translations[lang] || translations["pt-br"];
-      console.error(langTranslations.errors.loadTranslations);
-      return langTranslations;
-    } catch (error) {
-      console.error("Fallback error occurred:", error);
-    }
-  }
+  const applyTranslations = ({ index = {}, globals = {} }) => {
+    titleEl.textContent = index.title || titleEl.textContent;
+    jasnaEl.textContent = globals.name || jasnaEl.textContent;
+    btnYes.textContent = index.btnYes || btnYes.textContent;
+    btnNo.textContent = index.btnNo || btnNo.textContent;
+  };
 
-  function applyTranslations(translations) {
-    title.textContent = translations.index.title;
-    jasna.textContent = translations.globals.name;
-    btnYes.textContent = translations.index.btnYes;
-    btnNo.textContent = translations.index.btnNo;
-  }
+  const repositionBtnNo = () => {
+    const { width: w, height: h } = btnNo.getBoundingClientRect();
+    const x = Math.random() * (window.innerWidth - w);
+    const y = Math.random() * (window.innerHeight - h);
+    Object.assign(btnNo.style, {
+      position: 'absolute',
+      left: `${x}px`,
+      top: `${y}px`,
+    });
+  };
+
+  const throttle = (fn, ms = 100) => {
+    let ready = true;
+    return (...args) => {
+      if (!ready) return;
+      ready = false;
+      fn(...args);
+      setTimeout(() => (ready = true), ms);
+    };
+  };
 
   btnYes.addEventListener('click', () => {
-    location.href = "presente.html";
+    window.location.href = 'presente.html';
   });
 
-  btnNo.addEventListener('mouseover', () => desvia(btnNo));
+  btnNo.addEventListener('mouseover', () => {
+    if (Math.random() > CHANCE_TO_STAY) repositionBtnNo();
+  });
 
-  btnNo.addEventListener('click', async () => {
-    const translations = await loadTranslations(detectLanguage());
+  document.addEventListener(
+      'mousemove',
+      throttle((e) => {
+        const r = btnNo.getBoundingClientRect();
+        const dx = Math.abs(e.clientX - (r.left + r.width / 2));
+        const dy = Math.abs(e.clientY - (r.top + r.height / 2));
+        if (Math.max(dx, dy) < 150 && Math.random() > CHANCE_TO_STAY) {
+          repositionBtnNo();
+        }
+      }, 50)
+  );
+
+  setInterval(() => {
+    if (Math.random() > CHANCE_TO_STAY) repositionBtnNo();
+  }, 2000);
+
+  btnNo.addEventListener('click', async (e) => {
+    if (Math.random() > CHANCE_TO_STAY) {
+      e.preventDefault();
+      repositionBtnNo();
+      return;
+    }
+    const tr = await loadTranslations(detectLanguage());
     banner.classList.add('disable');
     gatinhoBravo.classList.remove('disable');
-    jasna.classList.add('disable');
-    title.textContent = translations.index.rejectMessage;
+    jasnaEl.classList.add('disable');
+    titleEl.textContent =
+        tr.index.rejectMessage || titleEl.textContent;
   });
 
-  const userLang = detectLanguage();
-  loadTranslations(userLang).then(applyTranslations);
+  loadTranslations(detectLanguage()).then(applyTranslations);
 });
